@@ -1,0 +1,646 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-asset~s.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/ryanparag/pen/LLrVbo?depth=everything&order=popularity&page=10&q=movie&show_forks=false" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<style class="cp-pen-styles">@import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
+body {
+  height: 100%;
+  width: 100%;
+  background: url('/img/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #010b26;
+}
+
+* {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.intro {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #6ABCEA;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.movie-card {
+  background: #ffffff;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 315px;
+  margin: 2em;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.movie-header {
+  padding: 0;
+  margin: 0;
+  height: 367px;
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.movie-header.film1 {
+    background-image: url("/img/FOUR\ DAUGHTERS_120x160_ANG.jpg");
+    background-size: cover;
+}
+
+.film2 {
+  background: url("/img/While\ the\ Green\ Grass\ Grows\ poster.jpg");
+  background-size: cover;
+}
+.film3 {
+  background: url("/img/Terrestrial\ Verses.jpg");
+  background-size: cover;
+}
+.film5 {
+  background: url("/img/Inshallah\ a\ Boy\ poster.jpg");
+  background-size: cover;
+}
+.film6 {
+  background: url("/img/Fallen\ Leaves.jpg");
+  background-size: cover;
+}
+.film7 {
+  background: url("/img/Evil\ Does\ Not\ Exist.jpg");
+  background-size: cover;
+}
+.film8 {
+  background: url("/img/Chimera.jpg");
+  background-size: cover;
+}
+.film9 {
+  background: url("/img/Anatomy\ of\ a\ Fall.jpg");
+  background-size: cover;
+}
+.film10 {
+  background: url("/img/AFIRE_Poster_original.jpg");
+  background-size: cover;
+}
+.film11 {
+  background: url("/img/About\ Dry\ Grasses.jpg");
+  background-size: cover;
+}
+.film12 {
+  background: url("/img/Blackbird\ Blackbird\ Blackberry.jpg");
+  background-size: cover;
+}
+.film13 {
+  background: url("/img/Let\ Me\ Go.jpg");
+  background-size: cover;
+}
+.film14 {
+  background: url("/img/Retreat.jpg");
+  background-size: cover;
+}
+.film15 {
+  background: url("/img/film_15.png");
+  background-size: cover;
+}
+.film16 {
+  background: url("/img/film_16.png");
+  background-size: cover;
+}
+
+
+.film4 {
+  background: url("/img/inside.jpg");
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.bladeRunner2049 {
+  background: url("http://cdn.collider.com/wp-content/uploads/2017/05/blade-runner-2049-poster-ryan-gosling.jpeg");
+  background-size: cover;
+  background-position: 100% 80%;
+}
+
+.header-icon-container {
+  position: relative;
+}
+
+
+.movie-card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.movie-content {
+  padding: 18px 18px 24px 18px;
+  margin: 0;
+}
+
+.movie-content-header, .movie-info {
+  display: table;
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 24px;
+  margin: 0;
+  display: table-cell;
+}
+
+.movie-info {
+  margin-top: 1em;
+}
+
+.info-section {
+  display: table-cell;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.info-section:first-of-type {
+  text-align: left;
+}
+
+.info-section:last-of-type {
+  text-align: right;
+}
+
+.info-section label {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: .5em;
+  font-size: 9px;
+}
+
+.info-section span {
+  font-weight: 700;
+  font-size: 11px;
+}
+
+@media screen and (max-width: 500px) {
+  .movie-card {
+    width: 95%;
+    max-width: 95%;
+    margin: 1em;
+    display: block;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+}
+</style></head><body>
+<p class="intro">Submission <b><a href="https://www.ubiff.mn/about/" target="_blank">Ulaanbaatar 15th international film festival</a></b><p>
+	
+<div class="container">
+
+	
+	<div class="movie-card">
+		<div class="movie-header film1">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">FOUR DAUGHTERS</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 110'</label>
+					<span>France, Tunisia, Germany, Saudi Arabia</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film2">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">WHILE THE GREEN GRASS GROWS</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 166'</label>
+					<span>Switzerland, Canada</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film3">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">TERRESTRIAL VERSES</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 77'</label>
+					<span>Iran</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film4">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">INSIDE THE YELLOW COCOON SHELL </h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Vietnam</label>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film5">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">INSHALLAH A BOY</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 113'</label>
+					<span>France, Tunisia, Germany, Saudi Arabia</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film6">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">FALLEN LEAVES</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 81</label>
+					<span>Finland, Germany</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film7">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">EVIL DOES NOT EXIST</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 106</label>
+					<span>UK, Greece</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film8">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">LA CHIMERA</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Italy </label>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film9">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">ANATOMY OF A FALL</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>France</label>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film10">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">AFIRE</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Germany</label>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film11">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">ABOUT DRY GRASSES</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 197'</label>
+					<span>Turkey</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film12">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">BLACKBIRD BLACKBIRD BLACKBERRY</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 110'</label>
+					<span>Finland, France, Tunisia, Germany, Saudi Arabia</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film13">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">LET ME GO</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>2023, 93'</label>
+					<span>Switzerland, France, Belgium</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film14">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">The Dark Tower</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Date & Time</label>
+					<span>Wed 16 Aug - 07:00PM</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film15">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">The Dark Tower</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Date & Time</label>
+					<span>Wed 16 Aug - 07:00PM</span>
+				</div><!--date,time-->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+	<div class="movie-card">
+		<div class="movie-header film16">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">Blade Runner 2049</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Date & Time</label>
+					<span>Mon 16 Oct - 10:00PM</span>
+				</div><!--date,time-->
+				<!-- Inside each movie-card div -->
+				<div class="like-dislike-buttons">
+                    <button class="like-button" data-movie="Blade Runner 2049">Like <span class="like-count">0</span></button>
+                    <button class="dislike-button" data-movie="Blade Runner 2049">Dislike <span class="dislike-count">0</span></button>
+                </div>
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+	
+</div><!--container-->
+<script>
+	const likeButtons = document.querySelectorAll('.like-button');
+const dislikeButtons = document.querySelectorAll('.dislike-button');
+
+likeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (!button.classList.contains('used')) {
+            const movieName = button.getAttribute('data-movie');
+            const likeCountElement = button.querySelector('.like-count');
+            const likeCount = parseInt(likeCountElement.textContent) + 1;
+            likeCountElement.textContent = likeCount;
+            button.classList.add('used'); // Disable the button
+        }
+    });
+});
+
+dislikeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (!button.classList.contains('used')) {
+            const movieName = button.getAttribute('data-movie');
+            const dislikeCountElement = button.querySelector('.dislike-count');
+            const dislikeCount = parseInt(dislikeCountElement.textContent) + 1;
+            dislikeCountElement.textContent = dislikeCount;
+            button.classList.add('used'); // Disable the button
+        }
+    });
+});
+</script>
+</body></html>
